@@ -12,10 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("Hi")
-        if let localData = self.readLocalFile(forName: "data") {
-            self.parse(jsonData: localData)
+        if let localData = self.readLocalFile(forName: "PictCoord") {
+            print(localData)
+            self.parsePicture(jsonData: localData)
         }
     }
 
@@ -32,34 +31,36 @@ class ViewController: UIViewController {
         
         return nil
     }
-    private func parse(jsonData: Data) {
+
+    private func parsePicture(jsonData: Data) {
         do {
-            let decodedData = try JSONDecoder().decode(DemoData.self,
+            let decodedData = try JSONDecoder().decode(Picture.self,
                                                        from: jsonData)
             
-            print("Title: ", decodedData.title)
-            print("Description: ", decodedData.description)
+            print("name ", decodedData.name)
+            print("x= ", decodedData.coordinates.x)
+            print("Y= ", decodedData.coordinates.y)
+            print("i= ", decodedData.coordinates.i)
+
             print("===================================")
         } catch {
             print("decode error")
         }
     }
-    private func loadJson(fromURLString urlString: String,
-                          completion: @escaping (Result<Data, Error>) -> Void) {
-        if let url = URL(string: urlString) {
-            let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    completion(.failure(error))
-                }
-                
-                if let data = data {
-                    completion(.success(data))
-                }
-            }
-            
-            urlSession.resume()
-        }
-    }
-
+//    private func parse(jsonData: Data) {
+//        do {
+//            let decodedData = try JSONDecoder().decode(DemoData.self,
+//                                                       from: jsonData)
+//
+//            print("Title: ", decodedData.title)
+//            print("Description: ", decodedData.description)
+//            print("===================================")
+//        } catch {
+//            print("decode error")
+//        }
+//    }
+    
 }
-
+    
+    
+ 

@@ -15,6 +15,8 @@
 		8A36F5422631CBCA00591862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A36F5402631CBCA00591862 /* LaunchScreen.storyboard */; };
 		8A36F54C2631D06C00591862 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A36F54B2631D06C00591862 /* Data.json */; };
 		8A36F54E2631D5F100591862 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36F54D2631D5F100591862 /* DemoData.swift */; };
+		8AB705002631E59F002816DC /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB704FF2631E59E002816DC /* Coding.swift */; };
+		8AB705032631E86B002816DC /* PictCoord.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AB705022631E86B002816DC /* PictCoord.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		8A36F5432631CBCA00591862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A36F54B2631D06C00591862 /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		8A36F54D2631D5F100591862 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+		8AB704FF2631E59E002816DC /* Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coding.swift; sourceTree = "<group>"; };
+		8AB705022631E86B002816DC /* PictCoord.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PictCoord.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +71,9 @@
 				8A36F53E2631CBCA00591862 /* Assets.xcassets */,
 				8A36F5402631CBCA00591862 /* LaunchScreen.storyboard */,
 				8A36F5432631CBCA00591862 /* Info.plist */,
+				8AB705022631E86B002816DC /* PictCoord.json */,
 				8A36F54B2631D06C00591862 /* Data.json */,
+				8AB704FF2631E59E002816DC /* Coding.swift */,
 				8A36F54D2631D5F100591862 /* DemoData.swift */,
 			);
 			path = JsonExample;
@@ -132,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A36F5422631CBCA00591862 /* LaunchScreen.storyboard in Resources */,
+				8AB705032631E86B002816DC /* PictCoord.json in Resources */,
 				8A36F53F2631CBCA00591862 /* Assets.xcassets in Resources */,
 				8A36F53D2631CBC900591862 /* Main.storyboard in Resources */,
 				8A36F54C2631D06C00591862 /* Data.json in Resources */,
@@ -148,6 +155,7 @@
 				8A36F54E2631D5F100591862 /* DemoData.swift in Sources */,
 				8A36F53A2631CBC900591862 /* ViewController.swift in Sources */,
 				8A36F5362631CBC900591862 /* AppDelegate.swift in Sources */,
+				8AB705002631E59F002816DC /* Coding.swift in Sources */,
 				8A36F5382631CBC900591862 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
