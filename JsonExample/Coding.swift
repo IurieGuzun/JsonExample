@@ -16,5 +16,5 @@ struct Coord: Codable
 }
 struct Picture: Codable {
     var name: String
-    var coordinates: Coord
+    var coordinates: [Coord]
 }

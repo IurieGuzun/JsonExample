@@ -26,7 +26,7 @@ class ViewController: UIViewController {
                 return jsonData
             }
         } catch {
-            print(error)
+            print(error.localizedDescription)
         }
         
         return nil
@@ -34,33 +34,15 @@ class ViewController: UIViewController {
 
     private func parsePicture(jsonData: Data) {
         do {
-            let decodedData = try JSONDecoder().decode(Picture.self,
+            let decodedData = try JSONDecoder().decode([Picture].self,
                                                        from: jsonData)
-            
-            print("name ", decodedData.name)
-            print("x= ", decodedData.coordinates.x)
-            print("Y= ", decodedData.coordinates.y)
-            print("i= ", decodedData.coordinates.i)
-
-            print("===================================")
+            print("count ", decodedData.count)
+            print("name ", decodedData[0].name)
+            print("Coord = ", decodedData[0].coordinates)
+            print("x= ", decodedData[0].coordinates[0].x)
+//            print("x= ", decodedData.coordinates[0].x)
         } catch {
             print("decode error")
         }
     }
-//    private func parse(jsonData: Data) {
-//        do {
-//            let decodedData = try JSONDecoder().decode(DemoData.self,
-//                                                       from: jsonData)
-//
-//            print("Title: ", decodedData.title)
-//            print("Description: ", decodedData.description)
-//            print("===================================")
-//        } catch {
-//            print("decode error")
-//        }
-//    }
-    
 }
-    
-    
- 
