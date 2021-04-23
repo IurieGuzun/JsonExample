@@ -8,6 +8,10 @@
 
 import Foundation
 
+var picCount = 0
+var curPicIndex = Int()
+var tempPictArray = [Int]()
+
 struct Coord: Codable
 {
     var x: Int
